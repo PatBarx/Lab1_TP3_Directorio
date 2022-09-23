@@ -1,18 +1,20 @@
 package lab1_tp3_directorio;
 
+import java.util.HashMap;
+
 public class DirectorioTelefonico {
 
-    private HashMap registro;
+    private HashMap <Telefono,Cliente> registro;
 
     public DirectorioTelefonico() {
     }
 
     public Boolean agregarCliente(Cliente cli, Telefono tel) {
-        throw new UnsupportedOperationException("Not supported yet.");
+       return registro.put(tel, cli) == null;
     }
 
     public Cliente buscarCliente(Telefono tel) {
-        throw new UnsupportedOperationException("Not supported yet.");
+       //
     }
 
     public List buscarTelefono(Cliente apellido) {
@@ -24,6 +26,6 @@ public class DirectorioTelefonico {
     }
 
     public Boolean borrarCliente(Telefono tel) {
-        throw new UnsupportedOperationException("Not supported yet.");
+        return registro.remove(tel) == null;
     }
 }
