@@ -1,31 +1,73 @@
 package lab1_tp3_directorio;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Map;
+import java.util.Scanner;
+import java.util.Set;
 
 public class DirectorioTelefonico {
 
-    private HashMap <Telefono,Cliente> registro;
+    private HashMap<Telefono, Cliente> registro;
 
     public DirectorioTelefonico() {
+        this.registro = new HashMap<>();
     }
 
-    public Boolean agregarCliente(Cliente cli, Telefono tel) {
-       return registro.put(tel, cli) == null;
+    public void agregarCliente(Telefono tel1, Cliente cliente1) {
+        registro.put(tel1, cliente1);
+
     }
 
-    public Cliente buscarCliente(Telefono tel) {
-       //
+    @Override
+    public String toString() {
+        return "DirectorioTelefonico{" + "registro=" + registro + '}';
     }
 
-    public List buscarTelefono(Cliente apellido) {
-        throw new UnsupportedOperationException("Not supported yet.");
+    public void buscarCliente(Long aux) {
+        for (Map.Entry<Telefono, Cliente> entry : registro.entrySet()) {
+            if (entry.getKey().getNumero() == aux) {
+                 System.out.println(entry.getKey());
+                System.out.println(entry.getValue());
+            }
+        }
+        //
     }
 
-    public Set buscarClienteS(Domicilio ciudad) {
-        throw new UnsupportedOperationException("Not supported yet.");
+    public void buscarTelefono(String apellido) {
+        for (Map.Entry<Telefono, Cliente> entry : registro.entrySet()) {
+            if (entry.getValue().getApellido().equalsIgnoreCase(apellido)) {
+                System.out.println(entry.getKey());
+                //   System.out.println(entry.getValue());
+            }
+        }
     }
 
-    public Boolean borrarCliente(Telefono tel) {
-        return registro.remove(tel) == null;
+    public void buscarClienteS(String domicilio) {
+        for (Map.Entry<Telefono, Cliente> entry : registro.entrySet()) {
+            if (entry.getValue().getDireccion().getNombreCiudad().equalsIgnoreCase(domicilio)) {
+                System.out.println(entry.getKey());
+                System.out.println(entry.getValue());
+            }
+        }
     }
+
+    public void borrarCliente(long numero) {
+        
+     registro.entrySet().removeIf(entry->entry.getKey().getNumero()==numero);
+        
+ 
+        }
+    
+
+    public void mostrarClientes() {
+        for (Map.Entry<Telefono, Cliente> entry : registro.entrySet()) {
+            System.out.println(entry.getKey());
+            System.out.println(entry.getValue());
+        }
+
+    }
+
 }

@@ -34,6 +34,11 @@ public class Domicilio {
     public void setAltura(int altura) {
         this.altura = altura;
     }
+
+    @Override
+    public String toString() {
+        return "Domicilio{" + "nombreCiudad=" + nombreCiudad + ", calle=" + calle + ", altura=" + altura + '}';
+    }
     
     
 }
