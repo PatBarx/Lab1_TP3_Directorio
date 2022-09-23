@@ -1,19 +1,15 @@
-package lab1_tp3_directorio;
+package lab1_tp3_directorio_V1;
 
 public class Domicilio {
 
     private String nombreCiudad;
+
     private String calle;
+
     private int altura;
-    
+
     public Domicilio() {
     }  
-
-    public Domicilio(String nombreCiudad, String calle, int altura) {
-        this.nombreCiudad = nombreCiudad;
-        this.calle = calle;
-        this.altura = altura;
-    }    
 
     public String getNombreCiudad() {
         return nombreCiudad;
@@ -41,7 +37,7 @@ public class Domicilio {
 
     @Override
     public String toString() {
-        return "\tCiudad: " + nombreCiudad + "\nCalle: " + calle +" "+ altura + "\n";
+        return "Domicilio{" + "nombreCiudad=" + nombreCiudad + ", calle=" + calle + ", altura=" + altura + '}';
     }
     
     

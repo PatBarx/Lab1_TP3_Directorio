@@ -1,24 +1,19 @@
-package lab1_tp3_directorio;
+package lab1_tp3_directorio_V1;
 
 import java.util.Objects;
 
 public class Cliente {
 
     private int dni;
+
     private String nombre;
+
     private String apellido;
+
     private Domicilio direccion;
 
     public Cliente() {
     }
-
-    public Cliente(int dni, String nombre, String apellido, Domicilio direccion) {
-        this.dni = dni;
-        this.nombre = nombre;
-        this.apellido = apellido;
-        this.direccion = direccion;
-    }
-    
 
     public int getDni() {
         return dni;
@@ -54,8 +49,7 @@ public class Cliente {
 
     @Override
     public int hashCode() {
-        int hash = 7;
-        hash = 41 * hash + this.dni;
+        int hash = 5;
         return hash;
     }
 
@@ -74,11 +68,21 @@ public class Cliente {
         if (this.dni != other.dni) {
             return false;
         }
+        if (!Objects.equals(this.nombre, other.nombre)) {
+            return false;
+        }
+        if (!Objects.equals(this.apellido, other.apellido)) {
+            return false;
+        }
+        if (!Objects.equals(this.direccion, other.direccion)) {
+            return false;
+        }
         return true;
     }
 
     @Override
     public String toString() {
-        return "\nNombre y Apellido:   " + nombre + ' ' + apellido  + "\tDNI: " + dni + "\nDireccion: " + direccion + " - - -  - - - - - - - - \n";
-    }   
+        return "Cliente{" + "dni=" + dni + ", nombre=" + nombre + ", apellido=" + apellido + ", direccion=" + direccion + '}';
+    }
+    
 }

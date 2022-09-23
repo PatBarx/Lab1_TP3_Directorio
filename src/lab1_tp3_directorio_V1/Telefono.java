@@ -1,8 +1,29 @@
-package lab1_tp3_directorio;
+package lab1_tp3_directorio_V1;
 
 public class Telefono {
 
     private long numero;
+
+    public Telefono() {
+    }
+
+   
+    @Override
+    public String toString() {
+        return "Telefono{" + "numero=" + numero + '}';
+    }
+
+    @Override
+    public int hashCode() {
+        int hash = 7;
+        hash = 19 * hash + (int) (this.numero ^ (this.numero >>> 32));
+        return hash;
+    }
+
+   
+  
+
+  
 
     public Telefono(long numero) {
         this.numero = numero;
@@ -16,12 +37,15 @@ public class Telefono {
         this.numero = numero;
     }    
 
-    @Override
-    public int hashCode() {
-        int hash = 5;
-        hash = 67 * hash + (int) (this.numero ^ (this.numero >>> 32));
-        return hash;
+    public void equals() {
+        
     }
+
+  //  public void hashCode() {
+        
+    //}
+
+    
 
     @Override
     public boolean equals(Object obj) {
@@ -39,11 +63,5 @@ public class Telefono {
             return false;
         }
         return true;
-    }    
-
-    @Override
-    public String toString() {
-        return "Linea: " + numero + '.';
     }
-    
 }

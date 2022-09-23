@@ -28,7 +28,7 @@
         </Method>
       </Methods>
     </Class>
-    <Class name="Cliente" package="" visibility="public" xPosition="442.0" yPosition="44.0">
+    <Class name="Cliente" package="" visibility="public" xPosition="518.0" yPosition="15.0">
       <Fields>
         <Field name="dni" type="int" visibility="private"/>
         <Field name="nombre" type="String" visibility="private"/>
@@ -38,14 +38,14 @@
       <Constructors/>
       <Methods/>
     </Class>
-    <Class name="Telefono" package="" visibility="public" xPosition="442.0" yPosition="252.0">
+    <Class name="Telefono" package="" visibility="public" xPosition="394.0" yPosition="286.0">
       <Fields>
         <Field name="numero" type="long" visibility="private"/>
       </Fields>
       <Constructors/>
       <Methods/>
     </Class>
-    <Class name="Domicilio" package="" visibility="public" xPosition="655.0" yPosition="53.0">
+    <Class name="Domicilio" package="" visibility="public" xPosition="729.0" yPosition="15.0">
       <Fields>
         <Field name="nombreCiudad" type="String" visibility="private"/>
         <Field name="calle" type="String" visibility="private"/>
@@ -57,7 +57,6 @@
   </ClassDiagramComponents>
   <ClassDiagramRelations>
     <HasRelation name="tiene" source="DirectorioTelefonico" target="Cliente" type="Default" sourceCardinality="0..1" targetCardinality="1..*" collectionType="List"/>
-    <HasRelation name="tiene" source="Cliente" target="Telefono" type="Default" sourceCardinality="0..1" targetCardinality="1..*" collectionType="List"/>
     <HasRelation name="dire" source="Cliente" target="Domicilio" type="Default" sourceCardinality="0..1" targetCardinality="1..1"/>
   </ClassDiagramRelations>
 </ClassDiagram>
