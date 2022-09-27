@@ -74,14 +74,19 @@ public class Fri_ClienteNuevo extends javax.swing.JInternalFrame {
         jtf_telefono.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
         jtf_telefono.setForeground(new java.awt.Color(0, 102, 153));
 
+        lbl_dni.setForeground(new java.awt.Color(255, 255, 255));
         lbl_dni.setText("DNI:");
 
+        lbl_apellido.setForeground(new java.awt.Color(255, 255, 255));
         lbl_apellido.setText("APELLIDO:");
 
+        lbl_nombre.setForeground(new java.awt.Color(255, 255, 255));
         lbl_nombre.setText("NOMBRE:");
 
+        lbl_ciudad.setForeground(new java.awt.Color(255, 255, 255));
         lbl_ciudad.setText("CIUDAD:");
 
+        lbl_telefono.setForeground(new java.awt.Color(255, 255, 255));
         lbl_telefono.setText("TELEFONO:");
 
         btn_guardar.setBackground(javax.swing.UIManager.getDefaults().getColor("Button.darcula.selection.color1"));

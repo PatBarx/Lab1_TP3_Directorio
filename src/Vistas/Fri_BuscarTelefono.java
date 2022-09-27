@@ -50,7 +50,8 @@ public class Fri_BuscarTelefono extends javax.swing.JInternalFrame {
         jPanel1.setBackground(new java.awt.Color(52, 58, 70));
 
         jtf_apellidoU.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
-        jtf_apellidoU.setForeground(new java.awt.Color(204, 255, 255));
+        jtf_apellidoU.setForeground(new java.awt.Color(0, 153, 153));
+        jtf_apellidoU.setText("asdasd");
 
         lbl_apellidoUser.setFont(new java.awt.Font("Dialog", 3, 18)); // NOI18N
         lbl_apellidoUser.setForeground(new java.awt.Color(153, 204, 255));

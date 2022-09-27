@@ -54,7 +54,7 @@ public class Fri_BorrarCliente extends javax.swing.JInternalFrame {
         jPanel1.setBackground(new java.awt.Color(52, 58, 70));
 
         jtf_telefono.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
-        jtf_telefono.setForeground(new java.awt.Color(153, 0, 102));
+        jtf_telefono.setForeground(new java.awt.Color(102, 0, 51));
 
         jtf_apellido.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
         jtf_apellido.setForeground(new java.awt.Color(102, 0, 51));
@@ -68,14 +68,19 @@ public class Fri_BorrarCliente extends javax.swing.JInternalFrame {
         jtf_dni.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
         jtf_dni.setForeground(new java.awt.Color(102, 0, 51));
 
+        lbl_telefono.setForeground(new java.awt.Color(255, 255, 255));
         lbl_telefono.setText("TELEFONO:");
 
+        lbl_apellido.setForeground(new java.awt.Color(255, 255, 255));
         lbl_apellido.setText("APELLIDO:");
 
+        lbl_nombre.setForeground(new java.awt.Color(255, 255, 255));
         lbl_nombre.setText("NOMBRE:");
 
+        lbl_ciudad.setForeground(new java.awt.Color(255, 255, 255));
         lbl_ciudad.setText("CIUDAD:");
 
+        lbl_dni.setForeground(new java.awt.Color(255, 255, 255));
         lbl_dni.setText("DNI:");
 
         btn_buscar.setBackground(new java.awt.Color(102, 0, 102));
@@ -152,11 +157,11 @@ public class Fri_BorrarCliente extends javax.swing.JInternalFrame {
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(lbl_telefono)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(btn_salir, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(lbl_telefono)
-                        .addGap(12, 12, 12)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(btn_buscar)
                             .addGroup(jPanel1Layout.createSequentialGroup()

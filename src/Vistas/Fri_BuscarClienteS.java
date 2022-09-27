@@ -49,7 +49,12 @@ public class Fri_BuscarClienteS extends javax.swing.JInternalFrame {
         jPanel1.setBackground(new java.awt.Color(52, 58, 70));
 
         jtf_ciudad.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
-        jtf_ciudad.setForeground(new java.awt.Color(204, 255, 255));
+        jtf_ciudad.setForeground(new java.awt.Color(0, 153, 153));
+        jtf_ciudad.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jtf_ciudadActionPerformed(evt);
+            }
+        });
 
         lbl_ciudad.setFont(new java.awt.Font("Dialog", 3, 18)); // NOI18N
         lbl_ciudad.setForeground(new java.awt.Color(153, 204, 255));
@@ -152,6 +157,10 @@ public class Fri_BuscarClienteS extends javax.swing.JInternalFrame {
     private void btn_salirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_salirActionPerformed
        this.dispose();
     }//GEN-LAST:event_btn_salirActionPerformed
+
+    private void jtf_ciudadActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtf_ciudadActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jtf_ciudadActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

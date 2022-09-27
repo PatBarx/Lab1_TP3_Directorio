@@ -53,30 +53,34 @@ public class Fri_BuscarCliente extends javax.swing.JInternalFrame {
         jPanel1.setBackground(new java.awt.Color(52, 58, 70));
 
         jtf_telefono.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
-        jtf_telefono.setForeground(new java.awt.Color(204, 255, 255));
+        jtf_telefono.setForeground(new java.awt.Color(0, 153, 153));
 
         jtf_apellido.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
-        jtf_apellido.setForeground(new java.awt.Color(204, 255, 255));
+        jtf_apellido.setForeground(new java.awt.Color(0, 153, 153));
 
         jtf_nombre.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
-        jtf_nombre.setForeground(new java.awt.Color(204, 255, 255));
+        jtf_nombre.setForeground(new java.awt.Color(0, 153, 153));
 
         jtf_ciudad.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
-        jtf_ciudad.setForeground(new java.awt.Color(204, 255, 255));
+        jtf_ciudad.setForeground(new java.awt.Color(0, 153, 153));
 
         jtf_dni.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
-        jtf_dni.setForeground(new java.awt.Color(204, 255, 255));
+        jtf_dni.setForeground(new java.awt.Color(0, 153, 153));
 
         lbl_LineaTel.setFont(new java.awt.Font("Dialog", 3, 18)); // NOI18N
         lbl_LineaTel.setForeground(new java.awt.Color(153, 204, 255));
         lbl_LineaTel.setText("Linea Telefónica");
 
+        lbl_apellido.setForeground(new java.awt.Color(255, 255, 255));
         lbl_apellido.setText("APELLIDO:");
 
+        lbl_nombre.setForeground(new java.awt.Color(255, 255, 255));
         lbl_nombre.setText("NOMBRE:");
 
+        lbl_ciudad.setForeground(new java.awt.Color(255, 255, 255));
         lbl_ciudad.setText("CIUDAD:");
 
+        lbl_dni.setForeground(new java.awt.Color(255, 255, 255));
         lbl_dni.setText("DNI:");
 
         btn_salir.setBackground(javax.swing.UIManager.getDefaults().getColor("Button.darcula.selection.color1"));

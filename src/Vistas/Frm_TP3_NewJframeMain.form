@@ -75,7 +75,7 @@
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
               <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
                 <TitledBorder justification="2" title="Telef&#xf3;nica Grupo 10">
-                  <Font PropertyName="font" name="Perpetua Titling MT" size="24" style="0"/>
+                  <Font PropertyName="font" name="Perpetua Titling MT" size="24" style="1"/>
                   <Color PropertyName="color" blue="ff" green="cc" red="99" type="rgb"/>
                 </TitledBorder>
               </Border>

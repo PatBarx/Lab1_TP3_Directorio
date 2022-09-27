@@ -35,7 +35,7 @@ public class Frm_TP3_NewJframeMain extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jPanel_Main.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Telefónica Grupo 10", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Perpetua Titling MT", 0, 24), new java.awt.Color(153, 204, 255))); // NOI18N
+        jPanel_Main.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Telefónica Grupo 10", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Perpetua Titling MT", 1, 24), new java.awt.Color(153, 204, 255))); // NOI18N
 
         btn_ClienteNuevo.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
         btn_ClienteNuevo.setForeground(new java.awt.Color(0, 204, 204));
