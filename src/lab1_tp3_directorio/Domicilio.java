@@ -13,7 +13,10 @@ public class Domicilio {
         this.nombreCiudad = nombreCiudad;
         this.calle = calle;
         this.altura = altura;
-    }    
+    }  
+    public Domicilio(String nombreCiudad) {
+        this.nombreCiudad = nombreCiudad;
+    } 
 
     public String getNombreCiudad() {
         return nombreCiudad;
@@ -41,7 +44,7 @@ public class Domicilio {
 
     @Override
     public String toString() {
-        return "\tCiudad: " + nombreCiudad + "\nCalle: " + calle +" "+ altura + "\n";
+        return "\tCiudad: " + nombreCiudad /*+ "\nCalle: " + calle +" "+ altura + "\n"*/;
     }
     
     
