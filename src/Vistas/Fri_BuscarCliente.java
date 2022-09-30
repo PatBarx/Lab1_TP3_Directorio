@@ -184,16 +184,24 @@ public class Fri_BuscarCliente extends javax.swing.JInternalFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btn_buscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_buscarActionPerformed
-        Telefono tel = new Telefono(Long.parseLong(jtf_telefono.getText()));
-        Cliente cli = Frm_TP3_NewJframeMain.guiaTel.buscarCliente(tel);
-        if (cli != null) {
-            jtf_apellido.setText(cli.getApellido());
-            jtf_nombre.setText(cli.getNombre());
-            jtf_ciudad.setText(cli.getDireccion().getNombreCiudad());
-            jtf_dni.setText(String.valueOf(cli.getDni()));
-        } else {
-            JOptionPane.showMessageDialog(null, "Linea no registrada");
-        }
+        boolean verifNum = this.jtf_telefono.getText().matches("[0-9]+");
+        if (verifNum) {
+            Telefono tel = new Telefono(Long.parseLong(jtf_telefono.getText()));
+            Cliente cli = Frm_TP3_NewJframeMain.guiaTel.buscarCliente(tel);
+            if (cli != null) {
+                jtf_apellido.setText(cli.getApellido());
+                jtf_nombre.setText(cli.getNombre());
+                jtf_ciudad.setText(cli.getDireccion().getNombreCiudad());
+                jtf_dni.setText(String.valueOf(cli.getDni()));
+            } else {
+                JOptionPane.showMessageDialog(null, "Linea no registrada");
+            }
+        }else {
+                JOptionPane.showMessageDialog(null, "Debe Ingresar números");
+            }
+        
+        
+        
 
     }//GEN-LAST:event_btn_buscarActionPerformed
 

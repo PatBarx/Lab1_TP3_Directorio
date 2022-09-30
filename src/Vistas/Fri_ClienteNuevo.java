@@ -6,6 +6,7 @@
 package Vistas;
 
 import java.awt.Component;
+import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 import lab1_tp3_directorio.Cliente;
 import lab1_tp3_directorio.Domicilio;
@@ -210,12 +211,20 @@ public class Fri_ClienteNuevo extends javax.swing.JInternalFrame {
     }//GEN-LAST:event_jtf_nombreActionPerformed
 
     private void btn_guardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_guardarActionPerformed
-                       //Cliente(int dni, String nombre, String apellido, Domicilio direccion)
+        boolean verifNum = this.jtf_telefono.getText().matches("[0-9]+");
+        boolean verifDni = this.jtf_dni.getText().matches("[0-9]+");
+        if (verifNum && verifDni && (!jtf_ciudad.getText().equals("")) && (!jtf_nombre.getText().equals("")) && (!jtf_apellido.getText().equals(""))) {
+        
         Domicilio dlio = new Domicilio(jtf_ciudad.getText());
         Telefono tel = new Telefono(Long.parseLong(jtf_telefono.getText()));
-        Cliente cli = new Cliente(Integer.parseInt(jtf_dni.getText()), jtf_nombre.getText(), jtf_apellido.getText(),dlio);
-        Frm_TP3_NewJframeMain.guiaTel.agregarCliente(cli, tel);
-        System.out.println(Frm_TP3_NewJframeMain.guiaTel);
+        Cliente cli = new Cliente(Integer.parseInt(jtf_dni.getText()), jtf_nombre.getText(), jtf_apellido.getText(), dlio);
+        //Una vez validados los campos, se agrega el cliente y se avisa
+            Frm_TP3_NewJframeMain.guiaTel.agregarCliente(cli, tel);
+            System.out.println(Frm_TP3_NewJframeMain.guiaTel);
+            JOptionPane.showMessageDialog(this, "Cliente Añadido");
+        } else {
+            JOptionPane.showMessageDialog(this, "Los datos no son correctos\no Faltan datos.");
+        }        
     }//GEN-LAST:event_btn_guardarActionPerformed
 
     private void btn_salirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_salirActionPerformed

@@ -213,27 +213,27 @@ public class Fri_BorrarCliente extends javax.swing.JInternalFrame {
     }//GEN-LAST:event_btn_salirActionPerformed
 
     private void btn_buscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_buscarActionPerformed
-        Telefono tel = new Telefono(Long.parseLong(jtf_telefono.getText()));
-        Cliente cli = Frm_TP3_NewJframeMain.guiaTel.buscarCliente(tel);
-        if (cli != null) {
-            jtf_apellido.setText(cli.getApellido());
-            jtf_nombre.setText(cli.getNombre());
-            jtf_ciudad.setText(cli.getDireccion().getNombreCiudad());
-            jtf_dni.setText(String.valueOf(cli.getDni()));
-        } else {
-            JOptionPane.showMessageDialog(null, "Linea no registrada");
-        }
-    
-        /* Telefono tel = new Telefono(Long.parseLong(jtf_tel.getText()));        
-        if (Frm_TP3_NewJframeMain.guiaTel.borrarCliente(tel)) {
-                        System.out.println("Cliente Borrado");
-                    } else {
-                        JOptionPane.showMessageDialog(null, "No se pudo realizar la operacion");
-                    }
-        */
+        //Valida y busca la existencia del cliente..
+        boolean verifNum = this.jtf_telefono.getText().matches("[0-9]+");
+        if (verifNum) {
+            Telefono tel = new Telefono(Long.parseLong(jtf_telefono.getText()));
+            Cliente cli = Frm_TP3_NewJframeMain.guiaTel.buscarCliente(tel);
+            if (cli != null) {
+                jtf_apellido.setText(cli.getApellido());
+                jtf_nombre.setText(cli.getNombre());
+                jtf_ciudad.setText(cli.getDireccion().getNombreCiudad());
+                jtf_dni.setText(String.valueOf(cli.getDni()));
+            } else {
+                JOptionPane.showMessageDialog(null, "Linea no registrada");
+            }
+        }else {
+                JOptionPane.showMessageDialog(null, "Debe Ingresar numeros");
+            }        
+       
     }//GEN-LAST:event_btn_buscarActionPerformed
 
     private void btn_borrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_borrarActionPerformed
+        //Borra el cliente
         Telefono tel = new Telefono(Long.parseLong(jtf_telefono.getText()));
         if (Frm_TP3_NewJframeMain.guiaTel.borrarCliente(tel)) {
             JOptionPane.showMessageDialog(null,"Cliente Borrado");
